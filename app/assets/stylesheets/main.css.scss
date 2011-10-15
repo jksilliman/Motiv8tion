@@ -1,13 +1,68 @@
 // Place all the styles related to the Main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Terminal+Dosis);
 
 html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}
+
+.clear {
+	clear:both;
+}
 
 html {
 	background-color:#fff;
 }
 
+#container {
+	margin-top:-20px;
+}
+
 #header {
 	background-color:#006600;
+}
+
+#logo {
+	margin:10px 0px 10px 0;
+	background-image:url(/assets/logo.png);
+	width:300px;
+	height:85px;
+	display:block;
+	float:left;
+}
+
+.inner {
+	width:800px;
+	margin:0 auto;
+}
+
+.facebook-connect-button {
+	background-image:url(/assets/facebook-connect-button.png);
+	width:195px;
+	height:24px;
+	display:block;
+	float:right;
+	margin:40px 0 10px 0;
+}
+
+#banner {
+	background-color:#66cc66;
+	height:300px;
+	font-family:"Terminal Dosis";
+	color:#fff;
+	font-size:24px;
+	font-weight:bold;
+	padding-top:20px;
+}
+
+.sign-up {
+	padding:10px 30px;
+	box-shadow:2px 2px 2px #444;
+	border:1px solid rgba(20,20,20,.3);
+	display:block;
+	float:right;
+	background-color:orange;
+	border-radius:10px;
+	color:#fff;
+	text-decoration:none;
+	font-weight:bold;
 }
