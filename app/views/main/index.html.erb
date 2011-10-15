@@ -1,12 +1,5 @@
 <div id="container">
-	<div id="header">
-		<div class="inner">
-			<a id="logo"></a>
-			<% unless current_user %>
-				<a href="<%=user_omniauth_authorize_path(:facebook)%>" class="facebook-connect-button"></a><div class="clear"></div>
-			<% end %>
-		</div>
-	</div>
+
 	<div id="banner">
 		<div class="inner">
       <form action="/goals/new/" method="GET">
