@@ -9,13 +9,10 @@
 	</div>
 	<div id="banner">
 		<div class="inner">
-			You can lead a horse to water, but you can't make him drink.<br /><br />
-			<a href="/sign-up" class="sign-up">Get Accountable</a>
-			
-			We help you chug.<br /><br />
-			
-			Motiv8ion is an online personal trainer dedicated to helping you actually follow through with your goals. Have fun accomplishing your plans through a variety fo creative incentive strategies.
-		
+      <form action="/goals/new/" method="GET">
+        I want to: <input name="goal[name]" id="goal" type="text"/> 
+        <input type="submit" value="Get Motivated!" />
+      </form>    
 		</div>
 		
 		
@@ -25,8 +22,14 @@
 		</div>
 	</div>
 	
-	<div id="footer>
+	<div id="footer">
 		<div class="inner">
 		</div>
 	</div>
 </div>
+<script>
+  $("#goal").autocomplete({
+        source: ["learn guitar", "lose 40 lbs", "learn spanish", "lift 200 lbs", "live healthier"]
+   });
+</script>
+
