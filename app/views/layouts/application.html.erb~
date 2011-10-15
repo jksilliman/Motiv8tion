@@ -10,6 +10,9 @@
   <p class="notice"><%= flash[:notice] %></p>
   <p class="error"><%= flash[:error] %></p> 
 
+  <% if current_user %>
+    <%= link_to "Logout", users_session_path, :method => "delete" %>
+  <% end %>
 <%= yield %>
 
 </body>
