@@ -11,23 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111015162455) do
+ActiveRecord::Schema.define(:version => 20111015202036) do
 
   create_table "goals", :force => true do |t|
     t.string   "name"
     t.integer  "num_people"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "user_goals", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "goal_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
-
-  add_index "user_goals", ["user_id", "goal_id"], :name => "index_user_goals_on_user_id_and_goal_id"
 
   create_table "users", :force => true do |t|
     t.string   "fb_id"

@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
       user = User.new(:email => data["email"], :password => Devise.friendly_token[0,20])  
       user.first_name = data["first_name"]
       user.last_name = data["last_name"]
-      user.fb_id = data["fb_id"]
+      user.fb_id = data["id"]
       user.save
       user
     end
