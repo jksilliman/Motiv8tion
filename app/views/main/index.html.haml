@@ -1,4 +1,2 @@
-- if current_user
-  = "Welcome, #{current_user.first_name}"
-- else
+- unless current_user
   = link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)
