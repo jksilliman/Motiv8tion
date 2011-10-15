@@ -4,6 +4,7 @@
   <title>Motiv8ion</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag  "nested_form" %> 
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -12,6 +13,7 @@
 
   <% if Rails.env.development? && !current_user %>
     <%= link_to "Testing Login", new_user_session_path %>
+  <% end %>
   <% if current_user %>
     Welcome, <%= current_user.first_name %>
     <%= image_tag current_user.image_url %>

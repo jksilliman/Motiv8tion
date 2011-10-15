@@ -1,0 +1,32 @@
+<div id="container">
+	<div id="header">
+		<div class="inner">
+			<a id="logo"></a>
+			<% unless current_user %>
+				<a href="<%=user_omniauth_authorize_path(:facebook)%>" class="facebook-connect-button"></a><div class="clear"></div>
+			<% end %>
+		</div>
+	</div>
+	<div id="banner">
+		<div class="inner">
+			You can lead a horse to water, but you can't make him drink.<br /><br />
+			<a href="/sign-up" class="sign-up">Get Accountable</a>
+			
+			We help you chug.<br /><br />
+			
+			Motiv8ion is an online personal trainer dedicated to helping you actually follow through with your goals. Have fun accomplishing your plans through a variety fo creative incentive strategies.
+		
+		</div>
+		
+		
+	</div>		
+	<div id="body">
+		<div class="inner">
+		</div>
+	</div>
+	
+	<div id="footer>
+		<div class="inner">
+		</div>
+	</div>
+</div>

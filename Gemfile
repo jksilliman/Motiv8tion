@@ -10,7 +10,7 @@ gem 'omniauth'
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :branch => 'master' # User authentication
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git', :branch => 'wrappers'
 gem 'kaminari'
-gem 'nested_form'
+gem 'nested_form', :git => 'git://github.com/ryanb/nested_form.git'
 
 
 group :development do 
