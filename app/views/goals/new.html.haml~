@@ -1,0 +1,2 @@
+%h1 Make a New Goal 
+= render '_form'

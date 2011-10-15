@@ -1,0 +1,5 @@
+%h1 My Goals
+= link_to "Create new goal", new_goal_path
+%ul.goals
+  - @goals.each do |goal|
+    %li= goal.name
