@@ -21,6 +21,8 @@ class User < ActiveRecord::Base
       user.first_name = data["first_name"]
       user.last_name = data["last_name"]
       user.fb_id = data["fb_id"]
+      user.save
+      user
     end
   end
   

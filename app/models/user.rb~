@@ -21,6 +21,7 @@ class User < ActiveRecord::Base
       user.first_name = data["first_name"]
       user.last_name = data["last_name"]
       user.fb_id = data["fb_id"]
+      user.save
     end
   end
   
@@ -36,5 +37,9 @@ class User < ActiveRecord::Base
 
   def name
     first_name + " " + last_name
+  end
+
+  def image_url
+    "https://graph.facebook.com/#{self.fb_id}/picture"
   end
 end
