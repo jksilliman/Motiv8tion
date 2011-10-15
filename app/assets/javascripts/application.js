@@ -7,5 +7,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery/ui
+//= require jquery/ui.autocomplete.html
 //= require nested_form
 //= require_tree .
