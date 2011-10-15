@@ -1,2 +1,11 @@
-= simple_form_for(@goal) do |f|
+= simple_nested_form_for(@goal) do |f|
   = f.input :name
+  = f.input :deadline
+  .tasks
+    %h4 What specific tasks do you need to do to accomplish your goal?
+    = f.fields_for :tasks do |task_form|
+      = task_form.input :name
+      = task_form.input :deadline
+      = task_form.link_to_remove "Remove this task"
+    %p= f.link_to_add "Add a task", :tasks
+  = f.button :submit
