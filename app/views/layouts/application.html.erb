@@ -11,6 +11,8 @@
   <p class="error"><%= flash[:error] %></p> 
 
   <% if current_user %>
+    Welcome, <%= current_user.first_name %>
+    <%= image_tag current_user.image_url %>
     <%= link_to "Logout", destroy_user_session_path, :method => "delete" %>
   <% end %>
 <%= yield %>

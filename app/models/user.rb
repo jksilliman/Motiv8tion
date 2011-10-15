@@ -16,15 +16,17 @@ class User < ActiveRecord::Base
     data = access_token['extra']['user_hash']
     if user = User.find_by_email(data["email"])
       user
-    else # Create a user with a stub password. 
-      User.create(:email => data["email"], :password => Devise.friendly_token[0,20]) 
+    else # Create a user with a stub password.
+      user = User.new(:email => data["email"], :password => Devise.friendly_token[0,20])  
+      user.first_name = data["first_name"]
+      user.last_name = data["last_name"]
+      user.fb_id = data["fb_id"]
     end
   end
   
   def self.new_with_session(params, session)
     super.tap do |user|
       if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["user_hash"]    
-        puts data
         user.email = data["email"]
         user.first_name = data["first_name"]
         user.last_name = data["last_name"]
@@ -34,5 +36,9 @@ class User < ActiveRecord::Base
 
   def name
     first_name + " " + last_name
+  end
+
+  def image_url
+    "https://graph.facebook.com/#{self.fb_id}/picture"
   end
 end
