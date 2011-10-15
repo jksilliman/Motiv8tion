@@ -1,0 +1,5 @@
+require 'twilio-ruby'
+
+TWILIO_SID = 'ACb5d8a3baccc344f6a4b41fc31a085d96'
+TWILIO_TOKEN = 'c5d2a56191fe013f88b5982419261bfe'
+TWILIO_NUMBER = '(773) 362-4682'
