@@ -1,26 +1,15 @@
-<div id="container">
-
-	<div id="banner">
-		<div class="inner">
-			<form action="/goals/new/" id="splash" method="GET">
-				<span id="iwanto">I want to: </span><input name="goal[name]" id="goal" placeholder="e.g. learn chinese, lose weight, learn the guitar" type="text"/> 
-				<input type="submit" id="submit" value="Get Motivated!" />
-			</form>    
+		<div id="banner">
+			<div class="inner">
+				<form action="/goals/new/" id="splash" method="GET">
+					<span id="iwanto">I want to: </span><input name="goal[name]" id="goal" placeholder="e.g. learn chinese, lose weight, learn the guitar" type="text"/> 
+					<input type="submit" id="submit" value="Get Motivated!" />
+				</form>    
+			</div>
 		</div>
 		
-		
-	</div>		
-	<div id="body">
 		<div class="inner">
 			<div class="pitch">Motiv8ion Helps You Achieve Your Goals With The Help Of Your Friends.</div>
 		</div>
-	</div>
-	
-	<div id="footer">
-		<div class="inner">
-		</div>
-	</div>
-</div>
 <script>
   $("#goal").autocomplete({
         source: ["learn guitar", "lose 40 lbs", "learn spanish", "lift 200 lbs", "live healthier"]
