@@ -1,13 +1,34 @@
 = simple_nested_form_for(@goal) do |f|
-  = f.input :name
-  = f.input :deadline, :as => :date
-  .tasks
-    %h4 What specific tasks do you need to do to accomplish your goal?
-    %ol
-      = f.fields_for :tasks do |task_form|
-        %li
-          = task_form.input :name
-          = task_form.input :deadline, :as => :date
-          = task_form.link_to_remove "Remove this task"
-      %p= f.link_to_add "Add a task", :tasks
-  = f.button :submit
+  .step.active
+    = f.input :name
+    = f.input :deadline, :as => :date
+    %a.next(href="#") Next
+  .step
+    .tasks
+      %h4 What specific tasks do you need to do to accomplish your goal?
+      %ol
+        = f.fields_for :tasks do |task_form|
+          %li
+            = task_form.input :name
+            = task_form.input :deadline, :as => :date
+            = task_form.link_to_remove "Remove this task"
+        %p= f.link_to_add "Add a task", :tasks
+    %a.next(href="#") Next
+
+
+  - unless current_user
+    .step
+      %a(href="#{user_omniauth_authorize_path(:facebook)}" class="popup facebook-connect-button" data-width="600" data-height="400")
+      
+  .step
+    = f.button :submit
+
+:coffeescript
+  window.nextStep = () ->
+    lastStep = $(".step.active")
+    lastStep.next(".step").fadeIn().addClass("active")
+    lastStep.fadeOut().removeClass("active")
+  $ () ->
+    $(".next").click () ->
+      nextStep()  
+    

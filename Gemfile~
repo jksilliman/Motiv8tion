@@ -11,7 +11,7 @@ gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :branch => 'm
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git', :branch => 'wrappers'
 gem 'kaminari'
 gem 'nested_form', :git => 'git://github.com/ryanb/nested_form.git'
-gem 'twilio'
+gem 'twilio-ruby'
 
 group :development do 
   gem 'sqlite3'

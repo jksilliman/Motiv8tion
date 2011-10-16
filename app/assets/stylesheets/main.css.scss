@@ -122,3 +122,24 @@ input#submit {
 	text-align:center;
 	font-weight:bold;
 }
+
+.step {
+  display: none;
+  &.active {
+     display: block;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

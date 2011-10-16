@@ -1,6 +1,10 @@
 :javascript
   if(window.opener) {
-    window.opener.location.reload(true);
+    if(window.opener.nextStep) {
+      window.opener.nextStep()
+    } else {
+      window.opener.location.reload(true);
+    }
     window.close()
   }
 
