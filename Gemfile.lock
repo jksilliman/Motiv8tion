@@ -96,6 +96,9 @@ GEM
       json (>= 1.2.4)
     kaminari (0.12.4)
       rails (>= 3.0.0)
+    koala (1.2.1)
+      faraday (~> 0.7.0)
+      multi_json (~> 1.0)
     log4r (1.1.9)
     macaddr (1.4.0)
       systemu (~> 2.2.0)
@@ -236,6 +239,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   kaminari
+  koala
   nested_form!
   omniauth
   pg

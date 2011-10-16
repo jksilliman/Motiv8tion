@@ -1,5 +1,5 @@
 Share this goal with your friends on Facebook?
 
-= form_for(@goal) do |f|
-  %input(type="text" value="#{@message}")
+= simple_form_for(@goal, :url => share_goal_path, :method =>"POST") do |f|
+  %textarea(name="message" rows="3" cols="70")= @message
   = f.button :submit, "Share"

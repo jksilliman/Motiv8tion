@@ -7,9 +7,10 @@
     %p
       Because 
       %strong= @goal.reason
-  %p
-    My next action is to
-    %strong= @goal.tasks.first.name
+  - if @goal.tasks.first
+    %p
+      My next action is to
+      %strong= @goal.tasks.first.name
   %p
     %button Stuck? Ask for help!
 
