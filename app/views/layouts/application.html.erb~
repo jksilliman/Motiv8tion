@@ -10,9 +10,9 @@
 <body>
 	<div id="header">
 		<div class="inner">
-			<a id="logo"></a>
+      <a id="logo"></a>
 			<% unless current_user %>
-				<a href="<%=user_omniauth_authorize_path(:facebook)%>" class="facebook-connect-button"></a><div class="clear"></div>
+        <a href="<%=user_omniauth_authorize_path(:facebook)%>" class="popup facebook-connect-button" data-width="600" data-height="400"></a><div class="clear"></div>
 			<% end %>
 		</div>
 	</div>
