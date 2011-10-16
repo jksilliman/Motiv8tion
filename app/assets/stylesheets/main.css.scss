@@ -14,7 +14,7 @@ html {
 }
 
 #container {
-	margin-top:-20px;
+
 }
 
 #header {
@@ -87,7 +87,7 @@ input#submit {
 
 #submit:hover {
 	cursor:pointer;
-	background-color:#ccc;
+	background-color:#3399cc;
 }
 
 ::-webkit-input-placeholder  { color:#082561; }
@@ -118,7 +118,7 @@ input#submit {
 	font-family:"Terminal Dosis";
 	color:#111;
 	text-shadow:2px 2px 2px #ddd;
-	font-size:48px;
+	font-size:28px;
 	text-align:center;
 	font-weight:bold;
 }
