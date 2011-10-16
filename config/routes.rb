@@ -11,7 +11,7 @@ Motiv8tion::Application.routes.draw do
       get  'share' => "goals#ask_share", :as => 'share'
       post 'share' => "goals#share", :as => 'share'
       get  'phone' => "goals#ask_phone", :as => 'phone'
-      post 'phone' => "goals#share", :as => 'phone'
+      post 'phone' => "goals#phone", :as => 'phone'
     end
   end
 
