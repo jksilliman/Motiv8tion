@@ -18,7 +18,7 @@ html {
 }
 
 #header {
-	background-color:#018f01;
+	background-color:#1d56ab;
 }
 
 #logo {
@@ -45,25 +45,32 @@ html {
 }
 
 #banner {
-	background-color:#fff;
-	height:100px;
+	background-color:#d6deff;
+	height:60px;
 	font-family:"Satisfy";
 	color:#000;
 	font-size:24px;
 	font-weight:regular;
 	padding-top:20px;
-	padding-left:140px;
+	padding-left:150px;
+}
+
+#iwanto {
+	padding-top:4px;
+	display:block;
+	float:left;
+	margin-right:4px;
 }
 
 form#splash input#goal{
 	font-size:18px;
 	color:#ff6600;
-	background-color:#fddcc5;
-	border:1px solid #fea062;
+	background-color:#eaeaea;
+	border:1px solid #8291d1;
 	border-radius:5px;
 	padding:5px;
 	width:400px;
-	margin-top:-6px;
+	margin-top:-10px;
 }
 
 input#submit {
@@ -83,7 +90,7 @@ input#submit {
 	background-color:#ccc;
 }
 
-::-webkit-input-placeholder  { color:#ff6600; }
+::-webkit-input-placeholder  { color:#082561; }
 
 .sign-up {
 	padding:10px 30px;
