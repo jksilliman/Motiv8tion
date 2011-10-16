@@ -40,12 +40,15 @@ class GoalsController < ApplicationController
   end
   
   def ask_share
-    @goal = current_user.goals.find_by_id
-    @message = "I want to #{@goal.name} by #{@goal.deadline}. Show me your support at #{root_url}"
+    @goal = current_user.goals.find_by_id(params[:id])
+    @message = "I want to #{@goal.name} by #{@goal.deadline.strftime("%B %e, %Y")}. Give me your support at #{root_url}"
   end
   def share
-    @goal = current_user.find_goal_by_id(params[:id])
-    current_user.facebook_post(params[:message])
+    @goal = current_user.goals.find_by_id(params[:id])
+    if s = session[:omniauth] && c = s["credentials"] && toekn = c["token"]
+      @graph = Koala::Facebook::API.new(token)
+      @graph.put_object("me", "feed", :message => params[:message]) 
+    end
     redirect_to goal_path(@goal)
   end
 

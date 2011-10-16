@@ -37,8 +37,7 @@ class User < ActiveRecord::Base
   end
 
   def facebook_post(message)
-    @graph = Koala::Facebook::API.new(session[:omniauth]["credentials"]["token"])
-    @graph.put_object("me", "feed", :message => message) 
+
   end
 
 

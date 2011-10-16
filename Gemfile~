@@ -12,6 +12,7 @@ gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git', :br
 gem 'kaminari'
 gem 'nested_form', :git => 'git://github.com/ryanb/nested_form.git'
 gem 'twilio-ruby'
+gem 'coffee-filter'
 
 group :development do 
   gem 'sqlite3'
