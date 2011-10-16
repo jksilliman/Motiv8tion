@@ -57,10 +57,11 @@ class GoalsController < ApplicationController
     @message = "Remember, you said you wanted to #{@goal.name}. How's that going?"
   end
   def phone
+    @goal = current_user.goals.find_by_id(params[:id])
     require 'contact'
     current_user.update_attribute(:phone_number, params[:phone_number])
     Contact.sms(current_user.phone_number, params[:message])
-    redirect_to :goals
+    redirect_to goal_path(@goal)
   end
 
 
