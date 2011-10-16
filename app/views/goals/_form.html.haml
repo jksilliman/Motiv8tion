@@ -15,6 +15,6 @@
 
   - unless current_user
     .step
+      %h4.connect Connect with Facebook to give and receive support to accomplish your goals
       %a.back(href="#") Back
-      
       %a(href="#{user_omniauth_authorize_path(:facebook)}" class="popup facebook-connect-button" data-width="600" data-height="400")
