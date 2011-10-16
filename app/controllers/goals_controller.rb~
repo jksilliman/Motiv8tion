@@ -14,7 +14,7 @@ class GoalsController < ApplicationController
   def create
     @goal = current_user.goals.build(params[:goal])
     if current_user.save
-      redirect_to :index
+      redirect_to :goals
     else
       render :new
     end
@@ -28,7 +28,7 @@ class GoalsController < ApplicationController
     @goal = current_user.goals.find_by_id(params[:id])
     @goal.attributes = params[:goal]
     if @goal.save
-      redirect_to :index
+      redirect_to :goals
     else
       render :edit
     end
