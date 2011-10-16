@@ -59,7 +59,7 @@ class GoalsController < ApplicationController
   def phone
     require 'contact'
     current_user.update_attribute(:phone_number, params[:phone_number])
-    Contact(current_user.phone_number, params[:message])
+    Contact.sms(current_user.phone_number, params[:message])
     redirect_to :goals
   end
 
