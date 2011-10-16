@@ -28,7 +28,15 @@
     <%= image_tag current_user.image_url %>
     <%= link_to "Logout", destroy_user_session_path, :method => "delete" %>
   <% end %>
+	<div id="container">				
+	<div id="body">
 <%= yield %>
+	</div>
+	<div id="footer">
+		<div class="inner">
+		</div>
+	</div>
+</div>
 
 </body>
 </html>
