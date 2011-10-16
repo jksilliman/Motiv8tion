@@ -14,7 +14,15 @@
 			<% unless current_user %>
 				<a href="<%=user_omniauth_authorize_path(:facebook)%>" class="popup facebook-connect-button" data-width="600" data-height="400"></a><div class="clear"></div>
 			<% end %>
-			<div class="clear"></div>
+      
+      <% if current_user %>
+        <div style="float: right">
+          Welcome, <%= current_user.first_name %>
+          <%= image_tag current_user.image_url %>
+          <%= link_to "Logout", destroy_user_session_path, :method => "delete" %>
+        </div>
+      <% end %>
+      <div class="clear"></div>
 		</div>
 	</div>
   <p class="notice"><%= flash[:notice] %></p>

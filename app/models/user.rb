@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
       user
     else # Create a user with a stub password.
       user = User.new(:email => data["email"], :password => Devise.friendly_token[0,20])  
+      # user.access_code =  
       user.first_name = data["first_name"]
       user.last_name = data["last_name"]
       user.fb_id = data["id"]
@@ -34,6 +35,12 @@ class User < ActiveRecord::Base
       end
     end
   end
+
+  def facebook_post(message)
+    @graph = Koala::Facebook::API.new(session[:omniauth]["credentials"]["token"])
+    @graph.put_object("me", "feed", :message => message) 
+  end
+
 
   def name
     first_name + " " + last_name
