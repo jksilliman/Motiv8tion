@@ -1,6 +1,6 @@
 Do you want text message reminders to continue working on your goal?
 
-= simple_form_for(@goal, :url => phone_goal_path, :method =>"POST") do |f|
+= simple_form_for(@goal, :url => phone_goal_path(@goal), :method =>"POST") do |f|
   = f.input :phone_number
   %textarea(name="message" rows="3" cols="70")= @message
   = f.button :submit, "Save"
