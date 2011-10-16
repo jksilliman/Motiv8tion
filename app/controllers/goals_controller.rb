@@ -14,7 +14,7 @@ class GoalsController < ApplicationController
   def create
     @goal = current_user.goals.build(params[:goal])
     if current_user.save
-      redirect_to :goals
+      redirect_to share_goal_path(@goal)
     else
       render :new
     end
@@ -35,8 +35,18 @@ class GoalsController < ApplicationController
   end
 
   def destroy
-    @goal = current_user.goals.find_by(params[:id])
+    @goal = current_user.goals.find_by_id(params[:id])
     @goal.destroy
+  end
+  
+  def ask_share
+    @goal = current_user.goals.find_by_id
+    @message = "I want to #{@goal.name} by #{@goal.deadline}. Show me your support at #{root_url}"
+  end
+  def share
+    @goal = current_user.find_goal_by_id(params[:id])
+    current_user.facebook_post(params[:message])
+    redirect_to goal_path(@goal)
   end
 
 end

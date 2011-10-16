@@ -1,2 +1,2 @@
 %h1 Change Your Goal
-= render '_form'
+= render 'form'

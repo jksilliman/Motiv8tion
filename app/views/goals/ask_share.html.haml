@@ -1,0 +1,5 @@
+Share this goal with your friends on Facebook?
+
+= form_for(@goal) do |f|
+  %input(type="text" value="#{@message}")
+  = f.button :submit, "Share"
