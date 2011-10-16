@@ -57,6 +57,7 @@ class GoalsController < ApplicationController
     @message = "Remember, you said you wanted to #{@goal.name}. How's that going?"
   end
   def phone
+    require 'contact'
     current_user.update_attribute(:phone_number, params[:phone_number])
     Contact(current_user.phone_number, params[:message])
     redirect_to :goals
