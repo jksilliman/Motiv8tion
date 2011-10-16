@@ -1,4 +1,5 @@
-Share this goal with your friends on Facebook?
+%span.connect
+  Connect with Facebook to give and receive support to accomplish your goals.
 
 = simple_form_for(@goal, :url => share_goal_path, :method =>"POST") do |f|
   %textarea(name="message" rows="3" cols="70")= @message

@@ -75,15 +75,6 @@ html {
 	margin:0 auto;
 }
 
-.facebook-connect-button {
-	background-image:url(/assets/facebook-connect-button.png);
-	width:195px;
-	height:24px;
-	display:block;
-	float:right;
-	margin:40px 0 10px 0;
-}
-
 #banner {
 	background-color:#d6deff;
 	height:60px;
@@ -207,18 +198,46 @@ div.date.optional {
 	padding:5px 10px;
 	border-radius:5px;
 	color:#fff;
-	background-color:#ccc;
 	border:2px solid black;
 	font-size:24px;
 	text-decoration:none;
 	background-color:#082561;
-
 }
 
 .next:hover {
 	background-color:#3399cc;
 }
 
+.back {
+ 	padding:5px 10px;
+	border-radius:5px;
+	color:#fff;
+	border:2px solid black;
+	font-size:16px;
+	text-decoration:none;
+	background-color:#3399cc;
+}
+
+.back:hover {
+	background-color:#082561; 
+}
+
 h4 {
 	font-size:24px;
+}
+
+.task {
+  width:400px;
+  font-size:24px;
+  display:block;
+  margin-bottom:20px;
+}
+
+.facebook-connect-button {
+	background-image:url(/assets/facebook-connect-button.png);
+	width:195px;
+	height:26px;
+  background-repeat:no-repeat;
+	display:block;
+  margin-left:300px;
 }
