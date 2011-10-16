@@ -194,7 +194,7 @@ div.date.optional {
 	margin-top:10px;
 }
 
-.next {
+.next, .button {
 	margin-left:440px;
 	padding:5px 10px;
 	border-radius:5px;
@@ -205,8 +205,12 @@ div.date.optional {
 	background-color:#082561;
 }
 
-.next:hover {
+.next:hover, .button:hover {
 	background-color:#3399cc;
+}
+
+.button {
+  margin-left:640px;
 }
 
 .back {
@@ -245,4 +249,27 @@ h4 {
 
 .connect {
   margin-bottom:20px;
+}
+
+.goal, .connect {
+  font-size:24px;
+}
+
+.connect {
+  margin:10px 0;
+  width:100%;
+  display:block;
+}
+
+.phone {
+  margin-bottom:10px;
+}
+
+.textlabel {
+  margin: 10px 0;
+  display:block;
+}
+
+.ask {
+  margin-bottom:10px;
 }
