@@ -1,5 +1,9 @@
-%h1 My Goals
-= link_to "Create new goal", new_goal_path
-%ul.goals
-  - @goals.each do |goal|
-    %li= goal.name
+.body
+  .inner
+    %h1 My Goals
+    = link_to "Create new goal", new_goal_path
+    %ul.goals
+    - @goals.each do |goal|
+      %li= link_to goal.name, edit_goal_path(goal)
+
+

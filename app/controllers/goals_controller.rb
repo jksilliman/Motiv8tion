@@ -8,7 +8,7 @@ class GoalsController < ApplicationController
   end
 
   def new
-    @goal = Goal.new(params[:goal])
+    @goal = Goal.new(params[:goal]||{})
   end
 
   def create
