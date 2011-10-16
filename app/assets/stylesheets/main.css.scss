@@ -50,6 +50,7 @@ h2 {
 
 html {
 	background-color:#fff;
+	font-family:"Terminal Dosis";
 }
 
 #container {
@@ -170,16 +171,54 @@ input#submit {
    }
 }
 
+div.optional {
+	margin-bottom:20px;
+	font-size:24px;
+}
 
+.date label.optional, .string label.optional, .text label.optional {
+	margin:0 20px 0 0;
+}
 
+label.text.optional, textarea.text.optional {
+	float:left;
+}
 
+textarea.optional, input.optional {
+	width:400px;
+}
 
+div.text.optional {
+	width:800px;
+	float:left;
+}
 
+div.date.optional {
+	width:800px;
+	float:left;
+}
 
+.string.optional {
+	margin-top:10px;
+}
 
+.next {
+	margin-left:440px;
+	padding:5px 10px;
+	border-radius:5px;
+	color:#fff;
+	background-color:#ccc;
+	border:2px solid black;
+	font-size:24px;
+	text-decoration:none;
+	background-color:#082561;
 
+}
 
+.next:hover {
+	background-color:#3399cc;
+}
 
-
-
-
+h4 {
+	font-size:24px;
+}
