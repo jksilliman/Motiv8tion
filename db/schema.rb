@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111016015513) do
+ActiveRecord::Schema.define(:version => 20111016165932) do
 
   create_table "goals", :force => true do |t|
     t.string   "name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20111016015513) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.datetime "deadline"
+    t.text     "reason"
   end
 
   create_table "tasks", :force => true do |t|

@@ -1,6 +1,7 @@
 = simple_nested_form_for(@goal) do |f|
   .step.active
     = f.input :name
+    = f.input :reason, :input_html => { :rows => 3 }
     = f.input :deadline, :as => :date
     %a.next(href="#") Next
   .step

@@ -1,1 +1,28 @@
-= @goal.name
+%h1 My Progress Page
+.status
+  %p 
+    I want to 
+    %strong= @goal.name
+  - unless @goal.reason.blank?
+    %p
+      Because 
+      %strong= @goal.reason
+  %p
+    My next action is to
+    %strong= @goal.tasks.first.name
+  %p
+    %button Stuck? Ask for help!
+
+
+
+%h2 History
+.history
+  I have already:
+  %ul
+    - @goal.tasks.each do |task|
+      %li= task.name
+
+  I have accomplished 
+  %strong 100%
+  of my goals on time!
+

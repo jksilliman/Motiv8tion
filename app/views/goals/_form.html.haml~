@@ -1,6 +1,7 @@
 = simple_nested_form_for(@goal) do |f|
   .step.active
     = f.input :name
+    = f.input :reason
     = f.input :deadline, :as => :date
     %a.next(href="#") Next
   .step
@@ -28,18 +29,4 @@
     %a.back(href="#") Back
     = f.button :submit
 
-:coffeescript
-  window.nextStep = () ->
-    lastStep = $(".step.active")
-    lastStep.next(".step").fadeIn().addClass("active")
-    lastStep.hide().removeClass("active")
-  window.prevStep = () ->
-    step = $(".step.active")
-    step.prev(".step").fadeIn().addClass("active")
-    step.hide().removeClass("active")
 
-  $ () ->
-    $(".next").click () ->
-      nextStep()  
-    $(".back").click () ->
-      prevStep()
