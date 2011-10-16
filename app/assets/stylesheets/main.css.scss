@@ -5,12 +5,52 @@
 
 html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}
 
+.status {
+  p {
+    font-size: 20px;
+  }
+
+  margin: 20px;
+
+  button {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+.history {
+  margin-left: 20px;
+  ul {
+    margin-left: 15px;
+    margin-bottom: 20px;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+h1 {
+  font-family: "Terminal Dosis";
+  font-weight: bold;
+  font-size: 32px;
+}
+h2 {
+  font-family: "Terminal Dosis";
+  font-weight: bold;
+  font-size: 26px;
+}
+
+
+
+
 .clear {
 	clear:both;
 }
 
 html {
 	background-color:#fff;
+	font-family:"Terminal Dosis";
 }
 
 #container {
@@ -19,6 +59,7 @@ html {
 
 #header {
 	background-color:#1d56ab;
+  border-bottom:30px solid #d6deff;
 }
 
 #logo {
@@ -33,15 +74,6 @@ html {
 .inner {
 	width:800px;
 	margin:0 auto;
-}
-
-.facebook-connect-button {
-	background-image:url(/assets/facebook-connect-button.png);
-	width:195px;
-	height:24px;
-	display:block;
-	float:right;
-	margin:40px 0 10px 0;
 }
 
 #banner {
@@ -131,16 +163,82 @@ input#submit {
    }
 }
 
+div.optional {
+	margin-bottom:20px;
+	font-size:24px;
+}
 
+.date label.optional, .string label.optional, .text label.optional {
+	margin:0 20px 0 0;
+}
 
+label.text.optional, textarea.text.optional {
+	float:left;
+}
 
+textarea.optional, input.optional {
+	width:400px;
+}
 
+div.text.optional {
+	width:800px;
+	float:left;
+}
 
+div.date.optional {
+	width:800px;
+	float:left;
+}
 
+.string.optional {
+	margin-top:10px;
+}
 
+.next {
+	margin-left:440px;
+	padding:5px 10px;
+	border-radius:5px;
+	color:#fff;
+	border:2px solid black;
+	font-size:24px;
+	text-decoration:none;
+	background-color:#082561;
+}
 
+.next:hover {
+	background-color:#3399cc;
+}
 
+.back {
+ 	padding:5px 10px;
+	border-radius:5px;
+	color:#fff;
+	border:2px solid black;
+	font-size:16px;
+	text-decoration:none;
+	background-color:#3399cc;
+}
 
+.back:hover {
+	background-color:#082561; 
+}
 
+h4 {
+	font-size:24px;
+}
 
+.task {
+  width:400px;
+  font-size:24px;
+  display:block;
+  margin-bottom:20px;
+}
 
+.facebook-connect-button {
+	background-image:url(/assets/facebook-connect-button.png);
+	width:195px;
+	height:26px;
+  background-repeat:no-repeat;
+	display:block;
+  margin-left:300px;
+}

@@ -1,20 +1,15 @@
 = simple_nested_form_for(@goal) do |f|
   .step.active
     = f.input :name
+    = f.input :reason, :input_html => { :rows => 3 }
     = f.input :deadline, :as => :date
     %a.next(href="#") Next
   .step
-    %a.back(href="#") Back
     
     .tasks
-      %h4 What specific tasks do you need to do to accomplish your goal?
-      %ol
-        = f.fields_for :tasks do |task_form|
-          %li
-            = task_form.input :name
-            = task_form.input :deadline, :as => :date
-            = task_form.link_to_remove "Remove this task"
-        %p= f.link_to_add "Add a task", :tasks
+      %h4 My very next step is...
+      %input.task(name="goals[tasks][0]" type="text")
+    %a.back(href="#") Back
     %a.next(href="#") Next
 
 
@@ -23,9 +18,3 @@
       %a.back(href="#") Back
       
       %a(href="#{user_omniauth_authorize_path(:facebook)}" class="popup facebook-connect-button" data-width="600" data-height="400")
-      
-  .step
-    %a.back(href="#") Back
-    = f.button :submit
-
-

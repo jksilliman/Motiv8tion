@@ -7,9 +7,11 @@ Motiv8tion::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :goals do
-    collection do
-      get  'share' => "goals#ask_share"
-      post 'share' => "goals#share"
+    member do
+      get  'share' => "goals#ask_share", :as => 'share'
+      post 'share' => "goals#share", :as => 'share'
+      get  'phone' => "goals#ask_phone", :as => 'phone'
+      post 'phone' => "goals#share", :as => 'phone'
     end
   end
 

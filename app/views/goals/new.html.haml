@@ -3,8 +3,12 @@
 :coffeescript
   window.nextStep = () ->
     lastStep = $(".step.active")
-    lastStep.next(".step").fadeIn().addClass("active")
-    lastStep.hide().removeClass("active")
+    next = lastStep.next(".step")
+    if next.length
+      next.fadeIn().addClass("active")
+      lastStep.hide().removeClass("active")
+    else
+      $("form").submit()
   window.prevStep = () ->
     step = $(".step.active")
     step.prev(".step").fadeIn().addClass("active")

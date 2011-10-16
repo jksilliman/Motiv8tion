@@ -14,7 +14,8 @@ en:
 
     labels:
       goal:
-        name: "What do you want to do?"
+        name: "I want to"
+        reason: "Because"
       goal_task:
         name: "Task"
       deadline: "By when?"
