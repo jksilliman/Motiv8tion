@@ -49,7 +49,17 @@ class GoalsController < ApplicationController
       @graph = Koala::Facebook::API.new(token)
       @graph.put_object("me", "feed", :message => params[:message]) 
     end
-    redirect_to goal_path(@goal)
+    redirect_to phone_goal_path(@goal)
   end
+
+  def ask_phone
+    @goal = current_user.goals.find_by_id(params[:id])
+    @message = "Remember, you said you wanted to #{@goal.name}. How's that going?"
+  end
+  def phone
+    current_user.update_attribute(:phone_number, params[:goal][:phone_number])
+    Contact(current_user.phone_number, params[:message])
+  end
+
 
 end

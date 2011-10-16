@@ -41,7 +41,7 @@ class GoalsController < ApplicationController
   
   def ask_share
     @goal = current_user.goals.find_by_id(params[:id])
-    @message = "I want to #{@goal.name} by #{@goal.deadline}. Give me your support at #{root_url}"
+    @message = "I want to #{@goal.name} by #{@goal.deadline.strftime("%B %e, %Y")}. Give me your support at #{root_url}"
   end
   def share
     @goal = current_user.goals.find_by_id(params[:id])
@@ -49,7 +49,17 @@ class GoalsController < ApplicationController
       @graph = Koala::Facebook::API.new(token)
       @graph.put_object("me", "feed", :message => params[:message]) 
     end
-    redirect_to goal_path(@goal)
+    redirect_to goal_phone_path(@goal)
   end
+
+  def ask_phone
+    @goal = current_user.goals.find_by_id(params[:id])
+    @message = "Remember, you said you wanted to #{@goal.name}. How's that going?"
+  end
+  def phone
+    current_user.update_attribute(:phone_number, params[:goal][:phone_number])
+    Contact(current_user.phone_number, params[:message])
+  end
+
 
 end
