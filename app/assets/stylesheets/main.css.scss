@@ -18,7 +18,7 @@ html {
 }
 
 #header {
-	background-color:#006600;
+	background-color:#018f01;
 }
 
 #logo {
@@ -45,14 +45,45 @@ html {
 }
 
 #banner {
-	background-color:#66cc66;
-	height:300px;
-	font-family:"Terminal Dosis";
-	color:#fff;
+	background-color:#fff;
+	height:100px;
+	font-family:"Satisfy";
+	color:#000;
 	font-size:24px;
-	font-weight:bold;
+	font-weight:regular;
 	padding-top:20px;
+	padding-left:140px;
 }
+
+form#splash input#goal{
+	font-size:18px;
+	color:#ff6600;
+	background-color:#fddcc5;
+	border:1px solid #fea062;
+	border-radius:5px;
+	padding:5px;
+	width:400px;
+	margin-top:-6px;
+}
+
+input#submit {
+	padding:4px;
+	background-color:#082561;
+	border:1px solid #020933;
+	border-radius:5px;
+	font-size:18px;
+	color:#fff;
+	box-shadow:1px 1px 1px #222;
+	font-family:"Terminal Dosis";
+	font-weight:normal;
+}
+
+#submit:hover {
+	cursor:pointer;
+	background-color:#ccc;
+}
+
+::-webkit-input-placeholder  { color:#ff6600; }
 
 .sign-up {
 	padding:10px 30px;
