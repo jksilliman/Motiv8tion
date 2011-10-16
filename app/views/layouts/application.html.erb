@@ -11,6 +11,7 @@
 </head>
 <body>
 	<div id="header">
+  
 		<div class="inner">
       <a id="logo"></a><div class="pitch">Helping you achieve your goals with the help of your friends.</div>
 <!--			<% unless current_user %>
@@ -24,9 +25,13 @@
           <%= link_to "Logout", destroy_user_session_path, :method => "delete" %>
         </div>
       <% end %> -->
+      
       <div class="clear"></div>
 		</div>
+    
 	</div>
+  
+      <%= yield :header %>
   <p class="notice"><%= flash[:notice] %></p>
   <p class="error"><%= flash[:error] %></p> 
 
@@ -39,9 +44,6 @@
     <%= link_to "Logout", destroy_user_session_path, :method => "delete" %>
   <% end %>
 	<div id="container">				
-    <div id="header">
-      <%= yield :header %>
-    </div>  
     <div id="body">
       <div class="inner">
         <%= yield %>
