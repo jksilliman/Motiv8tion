@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Satisfy|Terminal+Dosis' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div id="header">
@@ -14,7 +14,15 @@
 			<% unless current_user %>
 				<a href="<%=user_omniauth_authorize_path(:facebook)%>" class="popup facebook-connect-button" data-width="600" data-height="400"></a><div class="clear"></div>
 			<% end %>
-			<div class="clear"></div>
+      
+      <% if current_user %>
+        <div style="float: right">
+          Welcome, <%= current_user.first_name %>
+          <%= image_tag current_user.image_url %>
+          <%= link_to "Logout", destroy_user_session_path, :method => "delete" %>
+        </div>
+      <% end %>
+      <div class="clear"></div>
 		</div>
 	</div>
   <p class="notice"><%= flash[:notice] %></p>
@@ -28,7 +36,17 @@
     <%= image_tag current_user.image_url %>
     <%= link_to "Logout", destroy_user_session_path, :method => "delete" %>
   <% end %>
-<%= yield %>
+	<div id="container">				
+	<div id="body">
+    <div class="inner">
+      <%= yield %>
+    </div>
+	</div>
+	<div id="footer">
+		<div class="inner">
+		</div>
+	</div>
+</div>
 
 </body>
 </html>
