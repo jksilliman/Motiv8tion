@@ -30,11 +30,6 @@
   <% if Rails.env.development? && !current_user %>
     <%= link_to "Testing Login", new_user_session_path %>
   <% end %>
-  <% if current_user %>
-    Welcome, <%= current_user.first_name %>
-    <%= image_tag current_user.image_url %>
-    <%= link_to "Logout", destroy_user_session_path, :method => "delete" %>
-  <% end %>
 	<div id="container">				
     <div id="body">
       <div class="inner">
