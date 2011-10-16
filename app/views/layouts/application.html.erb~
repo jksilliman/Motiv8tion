@@ -6,6 +6,8 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Satisfy|Terminal+Dosis' rel='stylesheet' type='text/css'>
+<!-- start Mixpanel --><script type="text/javascript">var mpq=[];mpq.push(["init","8753e85e9927989cefca7ab069f0672e"]);(function(){var b,a,e,d,c;b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=(document.location.protocol==="https:"?"https:":"http:")+"//api.mixpanel.com/site_media/js/api/mixpanel.js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);e=function(f){return function(){mpq.push([f].concat(Array.prototype.slice.call(arguments,0)))}};d=["init","track","track_links","track_forms","register","register_once","identify","name_tag","set_config"];for(c=0;c<d.length;c++){mpq[d[c]]=e(d[c])}})();
+</script><!-- end Mixpanel -->
 </head>
 <body>
 	<div id="header">
@@ -37,15 +39,18 @@
     <%= link_to "Logout", destroy_user_session_path, :method => "delete" %>
   <% end %>
 	<div id="container">				
-	<div id="body">
-    <div class="inner">
-      <%= yield %>
+    <div id="header">
+      <%= yield :header %>
+    </div>  
+    <div id="body">
+      <div class="inner">
+        <%= yield %>
+      </div>
     </div>
-	</div>
-	<div id="footer">
-		<div class="inner">
-		</div>
-	</div>
+    <div id="footer">
+      <div class="inner">
+      </div>
+    </div>
 </div>
 
 </body>

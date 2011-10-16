@@ -12,8 +12,8 @@
 <body>
 	<div id="header">
 		<div class="inner">
-			<a id="logo"></a>
-			<% unless current_user %>
+      <a id="logo"></a><div class="pitch">Helping you achieve your goals with the help of your friends.</div>
+<!--			<% unless current_user %>
 				<a href="<%=user_omniauth_authorize_path(:facebook)%>" class="popup facebook-connect-button" data-width="600" data-height="400"></a><div class="clear"></div>
 			<% end %>
       
@@ -23,7 +23,7 @@
           <%= image_tag current_user.image_url %>
           <%= link_to "Logout", destroy_user_session_path, :method => "delete" %>
         </div>
-      <% end %>
+      <% end %> -->
       <div class="clear"></div>
 		</div>
 	</div>
