@@ -4,6 +4,8 @@
     = f.input :deadline, :as => :date
     %a.next(href="#") Next
   .step
+    %a.back(href="#") Back
+    
     .tasks
       %h4 What specific tasks do you need to do to accomplish your goal?
       %ol
@@ -18,19 +20,26 @@
 
   - unless current_user
     .step
+      %a.back(href="#") Back
+      
       %a(href="#{user_omniauth_authorize_path(:facebook)}" class="popup facebook-connect-button" data-width="600" data-height="400")
       
   .step
+    %a.back(href="#") Back
     = f.button :submit
 
 :coffeescript
-   window.nextStep = () ->
+  window.nextStep = () ->
     lastStep = $(".step.active")
     lastStep.next(".step").fadeIn().addClass("active")
-    lastStep.fadeOut().removeClass("active")
-
+    lastStep.hide().removeClass("active")
+  window.prevStep = () ->
+    step = $(".step.active")
+    step.prev(".step").fadeIn().addClass("active")
+    step.hide().removeClass("active")
 
   $ () ->
     $(".next").click () ->
       nextStep()  
-    
+    $(".back").click () ->
+      prevStep()
