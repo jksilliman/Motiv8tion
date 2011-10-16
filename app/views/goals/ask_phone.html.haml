@@ -1,11 +1,11 @@
-Do you want text message reminders to continue working on your goal?
+%h4.ask Do you want text message reminders to continue working on your goal?
 
 = simple_form_for(@goal, :url => phone_goal_path(@goal), :method =>"POST") do |f|
-  %p
+  %p.phone
     %label Phone
     %input(name="phone_number" type="text")
   %p  
-    %label Text Message to Send
+    %label.textlabel Text Message to Send
     %textarea(name="message" rows="3" cols="70")= @message
   = f.button :submit, "Save"
 = link_to "Skip?", goal_path(@goal) 
