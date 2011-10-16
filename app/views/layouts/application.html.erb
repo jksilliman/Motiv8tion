@@ -12,8 +12,9 @@
 		<div class="inner">
 			<a id="logo"></a>
 			<% unless current_user %>
-				<a href="<%=user_omniauth_authorize_path(:facebook)%>" class="facebook-connect-button"></a><div class="clear"></div>
+				<a href="<%=user_omniauth_authorize_path(:facebook)%>" class="facebook-connect-button"></a>
 			<% end %>
+			<div class="clear"></div>
 		</div>
 	</div>
   <p class="notice"><%= flash[:notice] %></p>
